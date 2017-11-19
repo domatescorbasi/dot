@@ -1,0 +1,33 @@
+# align
+# color
+# command
+# full_text
+# instance
+# interval
+# label
+# min_width
+# name
+# separator
+# separator_block_width
+# short_text
+# signal
+# urgent
+
+command=/usr/share/i3blocks/$BLOCK_NAME
+separator_block_width=10
+color=#F3F4F5
+markup=pango
+
+[volume]
+label=
+instance=Master
+interval=1
+signal=10
+markup=pango
+
+
+[time]
+label=
+command=date '+%a %d %b, %H:%M'
+interval=5
+markup=pango

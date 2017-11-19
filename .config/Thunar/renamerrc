@@ -1,0 +1,37 @@
+[Configuration]
+LastActiveMode=THUNAR_RENAMER_MODE_BOTH
+LastActiveRenamer=ThunarSbrRemoveRenamer
+
+[ThunarSbrDateRenamer]
+Offset=0
+Mode=THUNAR_SBR_DATE_MODE_NOW
+OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+Format=%Y%m%d
+
+[ThunarSbrNumberRenamer]
+TextMode=THUNAR_SBR_TEXT_MODE_NTO
+Mode=THUNAR_SBR_NUMBER_MODE_010203
+Start=3
+Text=\ -\ 
+
+[ThunarSbrInsertRenamer]
+Offset=0
+Mode=THUNAR_SBR_INSERT_MODE_INSERT
+OffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+Text=The Loungening\ 
+
+[ThunarSbrReplaceRenamer]
+Regexp=FALSE
+Replacement=\ 
+CaseSensitive=FALSE
+Pattern=-
+
+[ThunarSbrCaseRenamer]
+Mode=THUNAR_SBR_CASE_RENAMER_MODE_CAMEL
+
+[ThunarSbrRemoveRenamer]
+EndOffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+StartOffset=0
+EndOffset=14
+StartOffsetMode=THUNAR_SBR_OFFSET_MODE_LEFT
+

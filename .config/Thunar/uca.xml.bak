@@ -1,0 +1,155 @@
+<?xml encoding="UTF-8" version="1.0"?>
+<actions>
+<action>
+	<icon>utilities-terminal</icon>
+	<name>Open Terminal Here</name>
+	<unique-id>1473594246179576-1</unique-id>
+	<command>exo-open --working-directory %f --launch TerminalEmulator</command>
+	<description>Example for a custom action</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+<action>
+	<icon>stock_open</icon>
+	<name>Open as Root</name>
+	<unique-id>1477255599821850-2</unique-id>
+	<command>gksu Thunar %F</command>
+	<description>Open the folder with administration privileges</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>emblem-symbolic-link</icon>
+	<name>Create a Link</name>
+	<unique-id>1477255599821976-3</unique-id>
+	<command>ln -s %f  &apos;Link to %n&apos;</command>
+	<description>Create a symbolic link for each selected item</description>
+	<patterns>*</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>gnome-run</icon>
+	<name>Check SHA256</name>
+	<unique-id>1477255599821990-4</unique-id>
+	<command>mint-sha256sum %f</command>
+	<description>Computes SHA256 checksum for the selected file.</description>
+	<patterns>*.iso;*.ISO</patterns>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>media-optical</icon>
+	<name>Mount/Unmount ISO</name>
+	<unique-id>1477255599822003-5</unique-id>
+	<command>mountiso %f %n</command>
+	<description>Mount or Unmount ISO file.</description>
+	<patterns>*.iso;*.ISO</patterns>
+	<directories/>
+	<other-files/>
+</action>
+<action>
+	<icon>gtk-find</icon>
+	<name>Search</name>
+	<unique-id>1477255599822140-6</unique-id>
+	<command>catfish %f</command>
+	<description>Search for Files</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>fonts</icon>
+	<name>Install .ttf Font</name>
+	<unique-id>1477255599822163-7</unique-id>
+	<command>fontinstaller %f %n</command>
+	<description>Installs .ttf Fonts for the user or system</description>
+	<patterns>*.ttf;*.TTF</patterns>
+	<other-files/>
+</action>
+<action>
+	<icon>system-reboot</icon>
+	<name>Rotate Clockwise</name>
+	<unique-id>1474028311089211-4</unique-id>
+	<command>for file in %F; do tempfile=$(mktemp); (jpegtran -copy all -rotate 90 $file &gt; $tempfile); mv -f $tempfile $file; rm -f $tempfile; done</command>
+	<description>Losslessly Rotate JPEGs</description>
+	<patterns>*.jpg;*.JPG;*.jpeg;*.JPEG</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>meld</icon>
+	<name>Compare</name>
+	<unique-id>1474028870031645-5</unique-id>
+	<command>meld %F</command>
+	<description>Comparing selected files/directories</description>
+	<patterns>*</patterns>
+	<directories/>
+	<text-files/>
+</action>
+<action>
+	<icon>galois</icon>
+	<name>Organize</name>
+	<unique-id>1474033790683083-9</unique-id>
+	<command>/home/hztrance/Scripts/organize.sh %f</command>
+	<description>Organize folder by creating seperate folders for each extension.</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>abgx360gui</icon>
+	<name>Optimize with jpegoptim</name>
+	<unique-id>1475241329869483-2</unique-id>
+	<command>for file in %F; do jpegoptim --strip-all -of &quot;$file&quot;; done</command>
+	<description>Losslessly optimize JPEGs, by optimizing the Huffman tables and stripping comments and EXIF metadata from the file.</description>
+	<patterns>*.jpg;*.jpeg</patterns>
+	<image-files/>
+</action>
+<action>
+	<icon>TicketToRide</icon>
+	<name>Flatten Folder</name>
+	<unique-id>1475153978851971-1</unique-id>
+	<command>find . -mindepth 2 -type f -exec mv &quot;{}&quot; . \; &amp;&amp; find . -type d -empty -delete</command>
+	<description>Moves all files from sub-folders to parent (current) folder, then removes all empty folders inside the current folder.</description>
+	<patterns>*</patterns>
+	<directories/>
+</action>
+<action>
+	<icon>AndYetItMoves</icon>
+	<name>Slugify Filename</name>
+	<unique-id>1475154634049842-3</unique-id>
+	<command>for file in %N; do mv &quot;$file&quot; &quot;$(echo &quot;$file&quot; | tr -s &apos; &apos; | tr &apos; A-Z&apos; &apos;-a-z&apos; | tr -s &apos;-&apos; | tr -c &apos;[:alnum:][:cntrl:].&apos; &apos;-&apos;)&quot;; done</command>
+	<description>Rename the currently selected files, making the filenames lower-case &amp; replacing spaces with dashes.</description>
+	<patterns>*</patterns>
+	<directories/>
+	<audio-files/>
+	<image-files/>
+	<other-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>defcon</icon>
+	<name>Securely delete the file</name>
+	<unique-id>1474509761951152-3</unique-id>
+	<command>srm %F</command>
+	<description>Securely erases the selected file</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<image-files/>
+	<text-files/>
+	<video-files/>
+</action>
+<action>
+	<icon>defcon</icon>
+	<name>Securely delete the directory</name>
+	<unique-id>1474509797091657-4</unique-id>
+	<command>srm -r -l %F</command>
+	<description>Secure delete folder</description>
+	<patterns>*</patterns>
+	<startup-notify/>
+	<directories/>
+</action>
+</actions>
