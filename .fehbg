@@ -1,0 +1,2 @@
+#!/bin/sh
+feh  --bg-scale '/home/hztrance/Public/desktop/wp-i3.png' 
