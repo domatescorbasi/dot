@@ -26,7 +26,7 @@ workspace_auto_back_and_forth no
 # bindsym button8 exec --no-startup-id rofi -show run -config ~/.config/rofi/royal-sky.theme -font "Source Sans Pro 12" -lines 11
 
 # start a terminal
-bindsym $mod+Return workspace $WS1; exec xfce4-terminal
+bindsym $mod+Return workspace $WS1; exec xterm
 
 # shortcut applications
 bindsym $mod+F1                 exec goldendict
@@ -149,16 +149,9 @@ bindsym $mod+Shift+9 move container to workspace $WS9
 bindsym $mod+Shift+0 move container to workspace $WS0
 
 # startup applications
-#exec --no-startup-id xautolock -time 5 -locker lock
+
 exec feh --bg-scale './Public/desktop/wp-i3.png'
 exec compton --config ~/.config/compton/compton.conf
-exec /home/hztrance/Scripts/pastebinscraper.sh
-exec qbittorrent
-exec mono /opt/NzbDrone/NzbDrone.exe
-#exec python2 ~/Programs/CouchPotatoServer/CouchPotato.py
-#exec /home/hztrance/Scripts/ratio-ghost.sh
-#exec thunderbird
-#exec  xss-lock -- i3lock -n -i ~/Public/desktop/wp-i3.png
 
 
 # set border when applications started
@@ -194,11 +187,9 @@ assign [class="URxvt"]                          → $WS1
 assign [class="terminal"]                       → $WS1
 assign [class="Subl3"]                          → $WS2
 assign [class="Meld"]                           → $WS2
-assign [class="NetBeans IDE 8.2"]               → $WS2
 assign [class="QtCreator"]                      → $WS2
 assign [class="jetbrains-pycharm-ce"]           → $WS2
 assign [class="XCalc"]                          → $WS2
-assign [class="org-jd-gui-App"]                 → $WS2
 assign [class="Chromium"]                       → $WS3
 assign [class="firefox"]                        → $WS3
 assign [class="Thunar"]                         → $WS4
@@ -230,12 +221,9 @@ assign [class="Go-for-it"]                      → $WS9
 assign [class="Keepassx"]                       → $WS9
 assign [class="KeePass2"]                       → $WS9
 assign [class="qBittorrent"]	                → $WS9
-assign [class="Veracrypt"]	                    → $WS9
-assign [class="Main.tcl"]                       → $WS9 # Ratio Ghost
 assign [class="VisiPics.exe"]                   → $WS9
 assign [class="Wireshark"]                      → $WS9
 assign [class="Porthole"]                       → $WS0
-assign [class="Mintinstall.py"]	                → $WS0 # Software Manager
 assign [class="Bum"]                            → $WS0
 assign [class="Bleachbit"]                      → $WS0
 assign [class="Dconf-editor"]                   → $WS0
