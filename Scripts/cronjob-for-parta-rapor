@@ -1,0 +1,5 @@
+# Cronjob for parta-rapor (cronie implementation)
+20 9 * * 1-6 /usr/bin/parta-rapor -gr
+30 11 * * 6 /usr/bin/parta-rapor -ho
+45 11-15 * * 6 /usr/bin/parta-rapor -ghp
+
